@@ -1,0 +1,98 @@
+.effect-wrap .effect {
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes spin {
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes respin {
+    0%{
+    transform: rotate(0deg);
+    }
+    100%{
+    transform: rotate(-360deg);
+    }
+}
+
+.effect-1 {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #3a3c44;
+    right: 10%;
+    bottom: 30%;
+    animation: spin 10s linear infinite;
+}
+
+.effect-1a {
+    width: 60px;
+    height: 60px;
+    border: 4px solid #3a3c44;
+    opacity: 0.5;
+    right: 10%;
+    bottom: 30%;
+    animation: respin 10s linear infinite;
+}
+
+@keyframes leftBounce{
+    0%,100%{
+    transform: translateX(0);
+    }
+    50%{
+    transform: translateX(25px);
+    }
+}
+
+.effect-2{
+    height: 180px;
+    width: 180px;
+    border: 10px solid #23252d;
+    border-radius: 50%;
+    left:5%;
+    bottom: 25%;
+    animation: leftBounce 3s ease-in-out infinite;
+}
+
+@keyframes upBounce{
+    0%,100%{
+    transform: translateY(0);
+    }
+    50%{
+    transform: translateY(-25px);
+    }
+}
+
+.effect-2a{
+    height: 180px;
+    width: 180px;
+    border: 10px solid #23252d;
+    opacity: 0.5;
+    border-radius: 50%;
+    left:5%;
+    bottom: 25%;
+    animation: upBounce 3s ease-in-out infinite;
+}
+
+.effect-3 {
+    border-top: 30px solid transparent;
+    border-left: 30px solid #46484f;
+    left: 90%;
+    top: 50%;
+    animation: spin 15s linear infinite;
+}
+
+.effect-3::before {
+    content: '';
+    border-top: 30px solid transparent;
+    border-left: 30px solid #46484f;
+    position: absolute;
+    opacity: 0.5;
+    left: -35px;
+    top:-25px;
+}
